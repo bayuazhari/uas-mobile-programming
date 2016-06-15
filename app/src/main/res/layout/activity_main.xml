@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.bayu.uasmobileprogramming.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jenis Kelamin :"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/etAlamat"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/etNis"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:hint="Masukkan NIS Anda" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etNama"
+        android:layout_below="@+id/etNis"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/etNis"
+        android:hint="Masukkan Nama Lengkap Anda" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/etAlamat"
+        android:layout_below="@+id/etNama"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/etNama"
+        android:hint="Masukkan Alamat Anda" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/textView2"
+        android:id="@+id/radioGroup">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Laki-Laki"
+            android:id="@+id/rbLk"
+            android:checked="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perempuan"
+            android:id="@+id/rbPr"
+            android:checked="false" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mata Pelajaran yang Diambil :"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BI"
+        android:id="@+id/cbBI"
+        android:checked="false"
+        android:layout_alignTop="@+id/cbMTK"
+        android:layout_toStartOf="@+id/cbMTK" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MTK"
+        android:id="@+id/cbMTK"
+        android:checked="false"
+        android:layout_alignTop="@+id/cbFIS"
+        android:layout_toStartOf="@+id/cbFIS" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FIS"
+        android:id="@+id/cbFIS"
+        android:checked="false"
+        android:layout_alignTop="@+id/cbKIM"
+        android:layout_centerHorizontal="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KIM"
+        android:id="@+id/cbKIM"
+        android:layout_below="@+id/radioGroup"
+        android:layout_toEndOf="@+id/cbFIS"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BIO"
+        android:id="@+id/cbBIO"
+        android:layout_alignTop="@+id/cbKIM"
+        android:layout_toEndOf="@+id/cbKIM"
+        android:checked="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kirim"
+        android:id="@+id/btnKirim"
+        android:layout_below="@+id/cbBI"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="48dp"
+        android:layout_alignEnd="@+id/radioGroup" />
+</RelativeLayout>
